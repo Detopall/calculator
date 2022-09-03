@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+
+/* font-family: 'Rubik Dirt', cursive; */
+
+body {
+	width: 50%;
+	margin-left: 25%;
+	background-color: black;
+	font-family: 'Silkscreen';
+	color: white;
+	text-shadow: 5px 3px 4px black;
+}
+
+
+header {
+	text-align: center;
+	margin-top: 2rem;
+	font-size: 2rem;
+	color: white;
+}
+
+.display {
+	display: flex;
+	grid-area: display;
+	flex-direction: column;
+}
+
+.display .bottom {
+	line-height: 10vh;
+}
+
+.display .top {
+	font-size: 1rem;
+	padding-top: 1rem;
+	line-height: 1vh;
+	text-shadow: 2px 2px 2px black;
+}
+
+.container {
+	display: grid; 
+	grid-template-columns: repeat(4, 1fr); 
+	grid-template-rows: repeat(5, 1fr); 
+	gap: 0.1rem 0.1rem; 
+	grid-template-areas: 
+	  "display display display display"
+	  "clear divide multiply-key minus"
+	  "seven eight nine plus"
+	  "four five six plus"
+	  "one two three enter"
+	  "zero-key zero-key comma enter"; 
+	padding: 1.5rem;
+	background-color: red;
+	margin-top: 2rem;
+	height: 80vh;
+	border-radius: 0.5rem;
+}
+
+.container > div {
+	background-color: aqua;
+	text-align: center;
+	padding: 0.1rem;
+	font-size: 3rem;
+	line-height: 12vh;
+	border: 0.125rem solid black;
+	border-radius: 0.5rem;
+}
+
+.container > div:not(.display) {
+	background-color: red;
+	cursor: pointer;
+}
+
+.container > div:not(.display):active {
+	background-color: lightgreen;
+}
+
+.container .enter, .container .plus {
+	line-height: 25vh;
+}
+
+.container .display {
+	text-align: right;
+	padding-right: 3rem;
+}
+
+.zero-key { grid-area: zero-key; }
+.comma { grid-area: comma; }
+.enter { grid-area: enter; }
+.one { grid-area: one; }
+.two { grid-area: two; }
+.three { grid-area: three; }
+.plus { grid-area: plus; }
+.four { grid-area: four; }
+.five { grid-area: five; }
+.six { grid-area: six; }
+.seven { grid-area: seven; }
+.eight { grid-area: eight; }
+.nine { grid-area: nine; }
+.minus { grid-area: minus; }
+.multiply-key { grid-area: multiply-key; }
+.divide { grid-area: divide; }
+.clear { grid-area: clear; }
+
